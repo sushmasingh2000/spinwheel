@@ -185,6 +185,7 @@ const ClaimReward = () => {
     const custid = query.get("custid");
 
     const [walletAddress, setWalletAddress] = useState("");
+    const [amount, setAmount] = useState();
 
     const connectWallet = async () => {
         if (!window.ethereum) {
@@ -196,6 +197,7 @@ const ClaimReward = () => {
                 method: "eth_requestAccounts",
             });
             setWalletAddress(accounts[0]);
+            amountfn();
             toast.success("Wallet Connected" , {id:1});
         } catch (error) {
             toast.error("Wallet Connection Failed" , {id:1});
@@ -246,6 +248,21 @@ const ClaimReward = () => {
         }
     };
 
+    const amountfn = async()=>{
+        try{
+            const response = await apiConnectorPost(endpoint?.get_rew_amount , {
+                cust_id: custid
+            })
+            setAmount(response?.data?.result)
+        }
+        catch(e){
+            toast.error("Something Went Wrong")
+            console.log("something wnet wrong")
+        }
+    }
+    
+    
+
     return (
         <div style={styles.bg}>
             <CustomCircularProgress isLoading={loading} />
@@ -254,7 +271,7 @@ const ClaimReward = () => {
 
                 <div style={styles.rewardBox}>
                     <span style={styles.rewardLabel}>Reward Amount</span>
-                    {/* <span style={styles.rewardValue}>Auto Calculated</span> */}
+                    <span style={styles.rewardValue}>$ {amount}</span>
                 </div>
 
                 <p style={styles.walletLabel}>Connected Wallet:</p>
