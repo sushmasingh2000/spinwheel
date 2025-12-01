@@ -204,6 +204,7 @@ const Spinner = () => {
             });
             if (res?.data?.success) {
                 setShowClaimLink(true);
+                localStorage.setItem("amnt", cleanedPrize)
             } else {
                 toast.error("Something went wrong!", { id: 1 });
             }

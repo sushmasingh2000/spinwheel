@@ -183,9 +183,21 @@ const ClaimReward = () => {
     const [loading, setloading] = useState(false)
     const query = new URLSearchParams(useLocation().search);
     const custid = query.get("custid");
-
+    const encodedAmount = query.get("amnt");   // Base64 value from URL
     const [walletAddress, setWalletAddress] = useState("");
     const [amount, setAmount] = useState();
+
+    // ---- Base64 decode if exists ----
+    const decodeAmountFromParams = () => {
+        try {
+            if (!encodedAmount) return null;
+            const decoded = atob(encodedAmount);
+            return decoded;
+        } catch {
+            return null;
+        }
+    };
+
 
     const connectWallet = async () => {
         if (!window.ethereum) {
@@ -253,13 +265,19 @@ const ClaimReward = () => {
             const response = await apiConnectorPost(endpoint?.get_rew_amount, {
                 cust_id: custid
             })
-            setAmount(response?.data?.result)
+            if (response?.data?.result) {
+                setAmount(response.data.result);
+            } else {
+                const paramAmount = decodeAmountFromParams();
+                if (paramAmount) setAmount(paramAmount);
+            }
+        } catch (e) {
+            const paramAmount = decodeAmountFromParams();
+            if (paramAmount) setAmount(paramAmount);
+
+            toast.error("Something Went Wrong");
         }
-        catch (e) {
-            toast.error("Something Went Wrong")
-            console.log("something wnet wrong")
-        }
-    }
+    };
 
 
 

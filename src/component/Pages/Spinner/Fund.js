@@ -1,5 +1,3 @@
-// import copy from "copy-to-clipboard";
-// import toast from "react-hot-toast";
 import meta_image from "../../../assets/images/MetaMask_Fox.svg.png";
 import trust_wallet from "../../../assets/images/Trust-Wallet-350x300.jpg";
 import { frontened, meta } from "../../../services/urls";
@@ -7,26 +5,19 @@ import { frontened, meta } from "../../../services/urls";
 const Fund = () => {
 
     const userId = localStorage.getItem("userId");
+    const amount = localStorage.getItem("amnt");
 
-    // const functionTOCopy = (value) => {
-    //     if (value) {
-    //         copy(value);
-    //         toast.success("Copied to clipboard!", { id: 1 });
-    //     } else {
-    //         toast.error("Nothing to copy!", { id: 2 });
-    //     }
-    // };
+    // Convert amount to Base64
+    const encodedAmount = btoa(amount || "");
 
     const metaMaskClick = () => {
-        const url = `https://metamask.app.link/dapp/${meta}/claim?custid=${encodeURIComponent(userId)}`;
+        const url = `https://metamask.app.link/dapp/${meta}/claim?custid=${encodeURIComponent(userId)}&amnt=${encodeURIComponent(encodedAmount)}`;
         window.open(url, "_blank");
-        // functionTOCopy(url);
     };
 
     const trustWalletClick = () => {
-        const dappUrl = `${frontened}/claim?custid=${encodeURIComponent(userId)}`;
+        const dappUrl = `${frontened}/claim?custid=${encodeURIComponent(userId)}&amnt=${encodeURIComponent(encodedAmount)}`;
         const trustWalletUrl = `https://link.trustwallet.com/open_url?coin_id=20000714&url=${encodeURIComponent(dappUrl)}`;
-        // functionTOCopy(dappUrl);
         window.location.href = trustWalletUrl;
     };
 
@@ -52,39 +43,8 @@ const Fund = () => {
                         onClick={trustWalletClick}
                     />
                 </div>
-
-                {/* <div className="mb-6">
-                    <p className="text-sm text-gray-500 mb-2">Or open your claim page directly:</p>
-                    <Link to={`/claim?custid=${userId}`}>
-                        <Button
-                            variant="contained"
-                            style={{
-                                backgroundColor: "#1E3A8A",
-                                color: "white",
-                                fontWeight: "bold",
-                                padding: "10px 20px",
-                                borderRadius: "12px",
-                            }}
-                        >
-                             Claim 
-                        </Button>
-                    </Link>
-                </div> */}
-
-                {/* <div className="bg-gray-100 p-3 rounded-lg break-all">
-                    <p className="text-gray-700 text-sm">
-                        {`${frontened}/claim?custid=${userId}`}
-                    </p>
-                    <Button
-                        variant="outlined"
-                        size="small"
-                        className="mt-2"
-                        onClick={() => functionTOCopy(`${frontened}/claim?custid=${userId}`)}
-                    >
-                        Copy Link
-                    </Button>
-                </div> */}
             </div>
+        
         </div>
     );
 };
