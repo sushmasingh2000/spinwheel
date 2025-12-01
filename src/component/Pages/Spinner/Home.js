@@ -22,7 +22,7 @@ const colors = [
     "#462dff", "#8d00ff",
     "#ff00c8", "#ff0055", "#ff2a00",
     "#ff7a00", "#ffe600"
-];   
+];
 
 const Spinner = () => {
     const canvasRef = useRef(null);
@@ -204,7 +204,7 @@ const Spinner = () => {
             });
             if (res?.data?.success) {
                 setShowClaimLink(true);
-                localStorage.setItem("amnt", cleanedPrize)
+                localStorage.setItem("amnt", String(cleanedPrize));
             } else {
                 toast.error("Something went wrong!", { id: 1 });
             }
@@ -237,7 +237,7 @@ const Spinner = () => {
                             to={`/fund`}>
                             <Button className="!bg-white !mt-1"> Claim Now</Button>
                         </Link>
-                        
+
                     </div>
                 )}
                 <div className="wheel-area">
