@@ -1,0 +1,252 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #f7f9fc;
+    font-family: 'Inter', sans-serif;
+}
+
+/* ---------- MAIN RESPONSIVE CONTAINER ---------- */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;           
+    display: flex;
+  align-items: center;         
+    justify-content: center;     
+    /* gap: 40px; */
+    flex-wrap: wrap;
+    min-height: 100vh;         
+}
+
+
+.claim-link-center {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 25px 35px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0,0,0,0.15);
+  z-index: 9999;
+}
+
+.claim-text {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.claim-link {
+  font-size: 17px;
+  color: #0066ff;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+/* ---------- PANEL ---------- */
+.panel {
+    width: 100%;
+    max-width: 360px;
+    background: #fff;
+    padding: 24px;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    border: 3px solid #f1f4ff;
+}
+
+.panel h3 {
+    background: #f1f4ff;
+    padding: 12px;
+    text-align: center;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #8894b5;
+}
+
+/* ---------- ENTRY BOX ---------- */
+.entry-label {
+    font-weight: 600;
+    margin-top: 15px;
+}
+
+.entry-box {
+    display: flex;
+    margin-top: 10px;
+    gap: 10px;
+}
+
+.entry-box input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 7px;
+    border: 1px solid #dcdcdc;
+    font-size: 14px;
+}
+
+.entry-box button {
+    padding: 8px 16px;
+    background: #2d8cff;
+    border: none;
+    border-radius: 7px;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.entry-list {
+    margin-top: 20px;
+    height: 220px;
+    overflow-y: auto;
+    border-radius: 10px;
+}
+
+.entry-item {
+    padding: 12px;
+    margin-bottom: 8px;
+    background: #f7f9fc;
+    border-radius: 10px;
+    font-size: 15px;
+}
+
+/* ---------- WHEEL AREA RESPONSIVE ---------- */
+.wheel-area {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+}
+
+/* Canvas full responsive */
+#wheelcanvas {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    border: 14px solid #f7f9fc;
+    box-shadow: 0 4px 25px rgba(0,0,0,0.12);
+}
+
+/* ---------- PLAY BUTTON ---------- */
+.play-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 95px;
+    height: 95px;
+    background: #2d8cff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 0 8px #fff;
+    cursor: pointer;
+}
+
+.play-btn:after {
+    content: '▶';
+    color: #fff;
+    font-size: 40px;
+    margin-left: 5px;
+}
+
+/* ---------- POINTER ---------- */
+.pointer {
+    position: absolute;
+    left: -2px;
+    top: 16%;
+    /* right: -2px;
+    top: 4%; */
+    /* transform: rotate(145deg); */
+}
+
+
+/* ---------- POPUP ---------- */
+.win-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(6px);
+    background: rgba(255, 255, 255, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.hidden {
+    display: none;
+}
+
+.popup-content {
+    text-align: center;
+    margin-top: -40px;
+}
+
+.result-title {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: #333;
+}
+
+.winner-box {
+    background: linear-gradient(180deg, #FF6A3D, #F04405);
+    padding: 25px 60px;
+    border-radius: 18px;
+    color: white;
+    font-size: 28px;
+    font-weight: 700;
+    box-shadow: 0px 8px 18px rgba(0,0,0,0.18);
+}
+
+/* ---------- CONFETTI ---------- */
+.confetti {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 10000;
+}
+
+/* ---------- MOBILE RESPONSIVE ---------- */
+@media(max-width: 768px) {
+    .container {
+    /* margin: 20px auto; */
+    gap: 20px;
+    flex-direction: column-reverse;
+    max-width: 100%;
+}
+
+    .panel {
+        width: 100%;
+    }
+
+    .play-btn {
+        width: 75px;
+        height: 75px;
+    }
+
+    .play-btn:after {
+        font-size: 32px;
+    }
+
+    .panel, .wheel-area{
+        max-width: 100%;
+    }
+
+    
+}
+
+@media(max-width: 480px) {
+    .winner-box {
+        font-size: 20px;
+        padding: 18px 40px;
+    }
+}

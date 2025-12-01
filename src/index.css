@@ -1,0 +1,1106 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+.animation_image {
+  animation: rotatemain 24s reverse linear infinite;
+}
+
+@keyframes rotatemain {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.w95 {
+  width: 95% !important;
+  margin-left: 2.5% !important;
+}
+.w94 {
+  width: 95% !important;
+  /* margin-left: 2.5% !important; */
+}
+.transparentColorRedPurpleBGTOP {
+  background: #c86eff !important;
+  background: linear-gradient(
+    to bottom right,
+    #fb6161 50%,
+    #c86eff 50%
+  ) !important;
+}
+.transparentColorGreenRedBGTOP {
+  background: #18b680 !important;
+  background: linear-gradient(
+    to bottom right,
+    #18b680 50%,
+    #c86eff 50%
+  ) !important;
+}
+
+.flexrows {
+  display: flex !important;
+  align-items: end !important;
+  justify-content: center !important;
+  flex-direction: column !important;
+}
+.flexbetween {
+  width: 100%;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+}
+
+.flexrowsstart {
+  display: flex !important;
+  align-items: start !important;
+  justify-content: start !important;
+  flex-direction: column !important;
+}
+/* src/BottomDrawer.css */
+::-webkit-scrollbar {
+  width: .3em !important;
+  height: .2em !important;
+}
+::-webkit-scrollbar-button {
+  background: #ccc
+}
+::-webkit-scrollbar-track-piece {
+  background: #888
+}
+::-webkit-scrollbar-thumb {
+  background: #eee
+}​
+.rotate_refresh_image {
+  animation: rotate_image 1s linear infinite;
+}
+/* src/BottomDrawer.css */
+
+.drawer {
+  position: fixed;
+  bottom: -100%;
+  /* Initially hidden */
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+  transition: bottom 0.3s ease-in-out;
+  z-index: 1000;
+  /* Ensure it's above other content */
+}
+
+.drawer.open {
+  bottom: 0;
+  /* Slide in from bottom */
+}
+
+.drawer-content {
+  padding: 16px;
+}
+
+@keyframes rotate_image {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.blinking {
+  animation: blinker is linear infinite
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+.dialog {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  top: 100px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* border: 2px solid #000; */
+  background: #fff;
+  /* padding: 20px; */
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); */
+}
+
+.scratch-area {
+  width: 200px;
+  height: 100px;
+  background: gray;
+  margin: 10px 0;
+  position: relative;
+  cursor: pointer;
+}
+
+.scratch-area.scratched {
+  background: white; /* Change color when scratched */
+}
+
+.message {
+  font-size: 20px;
+  color: blue;
+  position: absolute;
+  top: 20%;
+  left: 10%;
+}
+
+.error {
+  color: red;
+  font-size: 0.8rem;
+  margin-top: 0.2rem;
+}
+
+.transparentColor {
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.countdownbgtrx {
+  background-size: 100% 100%;
+  background-position: center;
+  padding: 15px 10px;
+  margin-top: 20px;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.winTextone {
+  font-size: 15px !important;
+  font-weight: 500 !important;
+  color: white !important;
+  text-align: end !important;
+  margin-bottom: 20px !important;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+/* //////////////aviator css */
+.hide::-webkit-scrollbar {
+  display: none;
+}
+
+.circleNumberbody {
+  width: 15px !important;
+  height: 15px !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 13px !important;
+}
+
+.circleNumberbody-number {
+  width: 15px !important;
+  height: 15px !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 10px !important;
+}
+
+.crlg {
+  padding-top: 123px !important;
+  font-size: 25px !important;
+  font-weight: 600 !important;
+  color: white !important;
+}
+
+.bonustext {
+  text-align: center !important;
+  font-size: 35px !important;
+  font-weight: 600 !important;
+  margin-top: 17px !important;
+}
+
+.bonusamt {
+  font-size: 35px !important;
+  font-weight: 600 !important;
+  /* margin-top: -12px !important; */
+  text-align: center !important;
+}
+
+.bonuspr {
+  text-align: center !important;
+  margin-top: 8px !important;
+  color: white !important;
+  font-size: 15px !important;
+  font-weight: 600 !important;
+}
+
+.bonuscl {
+  text-align: center !important;
+  margin-top: 10px !important;
+  color: white !important;
+  font-size: 15px !important;
+  font-weight: 600 !important;
+}
+
+.svgclass {
+  width: 100px;
+  display: block;
+  margin: 40px auto 0;
+}
+
+.path {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 0;
+
+  &.circle {
+    -webkit-animation: dash 0.9s ease-in-out;
+    animation: dash 0.9s ease-in-out;
+  }
+
+  &.line {
+    stroke-dashoffset: 1000;
+    -webkit-animation: dash 0.9s 0.35s ease-in-out forwards;
+    animation: dash 0.9s 0.35s ease-in-out forwards;
+  }
+
+  &.check {
+    stroke-dashoffset: -100;
+    -webkit-animation: dash-check 0.9s 0.35s ease-in-out forwards;
+    animation: dash-check 0.9s 0.35s ease-in-out forwards;
+  }
+}
+
+.pio {
+  text-align: center;
+  margin: 20px 0 60px;
+  font-size: 1.25em;
+
+  &.success {
+    color: #73af55;
+  }
+
+  &.error {
+    color: #d06079;
+  }
+}
+
+@-webkit-keyframes dash {
+  0% {
+    stroke-dashoffset: 1000;
+  }
+
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes dash {
+  0% {
+    stroke-dashoffset: 1000;
+  }
+
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@-webkit-keyframes dash-check {
+  0% {
+    stroke-dashoffset: -100;
+  }
+
+  100% {
+    stroke-dashoffset: 900;
+  }
+}
+
+@keyframes dash-check {
+  0% {
+    stroke-dashoffset: -100;
+  }
+
+  100% {
+    stroke-dashoffset: 900;
+  }
+}
+
+.coming-soon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #ff3366, #ff9933);
+  max-width: 400px;
+  margin: auto;
+}
+
+.content {
+  text-align: center;
+  color: #fff;
+}
+
+.heading {
+  font-size: 4rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.subheading {
+  font-size: 1.8rem;
+  margin-bottom: 40px;
+}
+
+.countdown {
+  display: inline-block;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 1s ease-in-out;
+}
+
+.countdown-text {
+  font-size: 1.2rem;
+  color: #fff;
+  opacity: 0.8;
+}
+
+.timers {
+  font-size: 29px;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+  padding: 20px 5px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+  width: 95%;
+  margin: auto;
+  font-weight: 700;
+  margin-top: 45px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.loader {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  position: relative;
+  animation: rotate 1s linear infinite;
+}
+
+.loader::before {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  inset: 0px;
+  border-radius: 50%;
+  border: 5px solid #e3c010;
+  animation: prixClipFix 2s linear infinite;
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes prixClipFix {
+  0% {
+    clip-path: polygon (50% 50%, 0 0, 0 0, 0 0, 0 0, 0 0);
+  }
+
+  25% {
+    clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 0, 100% 0, 100% 0);
+  }
+
+  50% {
+    clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 100% 100%, 100% 100%);
+  }
+
+  75% {
+    clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 100%);
+  }
+
+  100% {
+    clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 0);
+  }
+}
+
+/* /////////////////////////////// aviator css //////////////////// */
+/* mymove1 */
+@keyframes mymove1 {
+  from {
+    top: 0px;
+  }
+  to {
+    top: 30px;
+  }
+}
+
+.dot-slider-container2 {
+  background: #267bad;
+  width: 5px;
+  height: 5px;
+  position: relative;
+  animation-delay: 5s;
+  animation: mymove2 1s linear infinite running;
+}
+
+@keyframes mymove2 {
+  from {
+    top: 30px;
+  }
+  to {
+    top: 60px;
+  }
+}
+.dot-slider-container3 {
+  background: #267bad;
+  width: 5px;
+  height: 5px;
+  position: relative;
+  animation-delay: 5s;
+  animation: mymove3 1s linear infinite running;
+}
+
+@keyframes mymove3 {
+  from {
+    top: 60px;
+  }
+  to {
+    top: 90px;
+  }
+}
+.dot-slider-container4 {
+  background: #267bad;
+  width: 5px;
+  height: 5px;
+  position: relative;
+  animation-delay: 5s;
+  animation: mymove4 1s linear infinite running;
+}
+
+@keyframes mymove4 {
+  from {
+    top: 90px;
+  }
+  to {
+    top: 120px;
+  }
+}
+.dot-slider-container5 {
+  background: #267bad;
+  width: 5px;
+  height: 5px;
+  position: relative;
+  animation-delay: 5s;
+  animation: mymove5 1s linear infinite running;
+}
+
+@keyframes mymove5 {
+  from {
+    top: 120px;
+  }
+  to {
+    top: 150px;
+  }
+}
+.dot-slider-container6 {
+  background: #267bad;
+  width: 5px;
+  height: 5px;
+  position: relative;
+  animation-delay: 5s;
+  animation: mymove6 1s linear infinite running;
+}
+
+@keyframes mymove6 {
+  from {
+    top: 150px;
+  }
+  to {
+    top: 180px;
+  }
+}
+.dot-slider-container7 {
+  background: #267bad;
+  width: 5px;
+  height: 5px;
+  position: relative;
+  animation-delay: 5s;
+  animation: mymove7 1s linear infinite running;
+}
+
+@keyframes mymove7 {
+  from {
+    top: 180px;
+  }
+  to {
+    top: 210px;
+  }
+}
+
+.dot-slider-container8 {
+  background: #267bad;
+  width: 5px;
+  height: 5px;
+  position: relative;
+  animation-delay: 5s;
+  animation: mymove8 1s linear infinite running;
+}
+
+@keyframes mymove8 {
+  from {
+    top: 210px;
+  }
+  to {
+    top: 240px;
+  }
+}
+.dot-slider-container9 {
+  background: #267bad;
+  width: 5px;
+  height: 5px;
+  position: relative;
+  animation-delay: 5s;
+  animation: mymove9 1s linear infinite running;
+}
+
+@keyframes mymove9 {
+  from {
+    top: 240px;
+  }
+  to {
+    top: 270px;
+  }
+}
+.dot-slider-container10 {
+  background: #267bad;
+  width: 5px;
+  height: 5px;
+  position: relative;
+  animation-delay: 5s;
+  animation: mymove10 1s linear infinite running;
+}
+
+@keyframes mymove10 {
+  from {
+    top: 270px;
+  }
+  to {
+    top: 310px;
+  }
+}
+.dot-slider-container11 {
+  background: #267bad;
+  width: 5px;
+  height: 5px;
+  position: relative;
+  animation-delay: 5s;
+  animation: mymove11 1s linear infinite running;
+}
+
+@keyframes mymove11 {
+  from {
+    top: 310px;
+  }
+  to {
+    top: 340px;
+  }
+}
+.dot-slider-container12 {
+  background: #267bad;
+  width: 5px;
+  height: 5px;
+  position: relative;
+  animation-delay: 5s;
+  animation: mymove12 1s linear infinite running;
+}
+
+@keyframes mymove12 {
+  from {
+    top: 340px;
+  }
+  to {
+    top: 370px;
+  }
+}
+
+.dot-slider-container13 {
+  background: #267bad;
+  width: 5px;
+  height: 5px;
+  position: relative;
+  animation-delay: 5s;
+  animation: mymove13 1s linear infinite running;
+}
+
+@keyframes mymove13 {
+  from {
+    top: 370px;
+  }
+  to {
+    top: 400px;
+  }
+}
+/* bottom dot slide */
+.dot-slider-container_bottom1 {
+  background: white;
+  width: 5px;
+  height: 5px;
+  position: absolute;
+  animation-delay: 5s;
+  animation: mymove_bottom1 3s linear infinite running;
+}
+
+@keyframes mymove_bottom1 {
+  from {
+    right: 0px;
+  }
+  to {
+    right: 80px;
+  }
+}
+
+.dot-slider-container_bottom2 {
+  background: white;
+  width: 5px;
+  height: 5px;
+  position: absolute;
+  animation-delay: 5s;
+  animation: mymove_bottom2 3s linear infinite running;
+}
+
+@keyframes mymove_bottom2 {
+  from {
+    right: 80px;
+  }
+  to {
+    right: 160px;
+  }
+}
+.dot-slider-container_bottom3 {
+  background: white;
+  width: 5px;
+  height: 5px;
+  position: absolute;
+  animation-delay: 5s;
+  animation: mymove_bottom3 3s linear infinite running;
+}
+
+@keyframes mymove_bottom3 {
+  from {
+    right: 160px;
+  }
+  to {
+    right: 240px;
+  }
+}
+.dot-slider-container_bottom4 {
+  background: white;
+  width: 5px;
+  height: 5px;
+  position: absolute;
+  animation-delay: 5s;
+  animation: mymove_bottom4 3s linear infinite running;
+}
+
+@keyframes mymove_bottom4 {
+  from {
+    right: 240px;
+  }
+  to {
+    right: 320px;
+  }
+}
+.dot-slider-container_bottom5 {
+  background: white;
+  width: 5px;
+  height: 5px;
+  position: absolute;
+  animation-delay: 5s;
+  animation: mymove_bottom5 3s linear infinite running;
+}
+
+@keyframes mymove_bottom5 {
+  from {
+    right: 320px;
+  }
+  to {
+    right: 400px;
+  }
+}
+.dot-slider-container_bottom6 {
+  background: white;
+  width: 5px;
+  height: 5px;
+  position: absolute;
+  animation-delay: 5s;
+  animation: mymove_bottom6 3s linear infinite running;
+}
+
+@keyframes mymove_bottom6 {
+  from {
+    right: 400px;
+  }
+  to {
+    right: 480px;
+  }
+}
+.dot-slider-container_bottom7 {
+  background: white;
+  width: 5px;
+  height: 5px;
+  position: absolute;
+  animation-delay: 5s;
+  animation: mymove_bottom7 3s linear infinite running;
+}
+
+@keyframes mymove_bottom7 {
+  from {
+    right: 480px;
+  }
+  to {
+    right: 560px;
+  }
+}
+.dot-slider-container_bottom8 {
+  background: white;
+  width: 5px;
+  height: 5px;
+  position: absolute;
+  animation-delay: 5s;
+  animation: mymove_bottom8 3s linear infinite running;
+}
+
+@keyframes mymove_bottom8 {
+  from {
+    right: 560px;
+  }
+  to {
+    right: 640px;
+  }
+}
+.dot-slider-container_bottom9 {
+  background: white;
+  width: 5px;
+  height: 5px;
+  position: absolute;
+  animation-delay: 5s;
+  animation: mymove_bottom9 3s linear infinite running;
+}
+
+@keyframes mymove_bottom9 {
+  from {
+    right: 640px;
+  }
+  to {
+    right: 720px;
+  }
+}
+.dot-slider-container_bottom10 {
+  background: white;
+  width: 5px;
+  height: 5px;
+  position: absolute;
+  animation-delay: 5s;
+  animation: mymove_bottom10 3s linear infinite running;
+}
+
+@keyframes mymove_bottom10 {
+  from {
+    right: 720px;
+  }
+  to {
+    right: 800px;
+  }
+}
+.dot-slider-container_bottom11 {
+  background: white;
+  width: 5px;
+  height: 5px;
+  position: absolute;
+  animation-delay: 5s;
+  animation: mymove_bottom11 3s linear infinite running;
+}
+
+@keyframes mymove_bottom11 {
+  from {
+    right: 800px;
+  }
+  to {
+    right: 880px;
+  }
+}
+.dot-slider-container_bottom12 {
+  background: white;
+  width: 5px;
+  height: 5px;
+  position: absolute;
+  animation-delay: 5s;
+  animation: mymove_bottom12 3s linear infinite running;
+}
+
+@keyframes mymove_bottom12 {
+  from {
+    right: 880px;
+  }
+  to {
+    right: 960px;
+  }
+}
+.dot-slider-container_bottom13 {
+  background: white;
+  width: 5px;
+  height: 5px;
+  position: absolute;
+  animation-delay: 5s;
+  animation: mymove_bottom13 3s linear infinite running;
+}
+
+@keyframes mymove_bottom13 {
+  from {
+    right: 960px;
+  }
+  to {
+    right: 1040px;
+  }
+}
+.dot-slider-container_bottom14 {
+  background: white;
+  width: 5px;
+  height: 5px;
+  position: absolute;
+  animation-delay: 5s;
+  animation: mymove_bottom14 3s linear infinite running;
+}
+
+@keyframes mymove_bottom14 {
+  from {
+    right: 1040px;
+  }
+  to {
+    right: 1120px;
+  }
+}
+/* //////////////////////? */
+
+.no-underline {
+  display: none;
+}
+.selected-tab {
+  background-color: red;
+}
+
+/* //////////////////waiting for next round  */
+.loder-waiting-for-next-round {
+  height: 100%;
+  position: absolute;
+  right: 0px;
+  width: 0;
+  background-color: #3c3b3b; /* Set the background color you want */
+  border-radius: inherit; /* Make sure the child div has the same border-radius as the parent */
+  animation: widthAnimation 20s ease-in-out infinite; /* Adjust the animation duration as needed */
+}
+
+@keyframes widthAnimation {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.loder-waiting-for-next-round-start {
+  height: 100%;
+  position: absolute;
+  right: 0px;
+  width: 0;
+  background-color: #3c3b3b; /* Set the background color you want */
+  border-radius: inherit; /* Make sure the child div has the same border-radius as the parent */
+  animation: widthAnimation 2s ease-in-out infinite; /* Adjust the animation duration as needed */
+}
+
+/* //  rotate image */
+.rotate-animation {
+  animation: rotate 2s linear infinite; /* Adjust the animation duration as needed */
+}
+.rotate-animation-bg {
+  animation: rotate 20s linear infinite; /* Adjust the animation duration as needed */
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.smoke {
+  transform: rotate(-110deg);
+}
+
+/* @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  } */
+
+.custom-tab-indicator {
+  background: "blue" !important;
+  height: 5px;
+}
+
+/* //////////// win slider */
+.winslider {
+  position: absolute;
+  /* background-image: url("./assets/win.png"); */
+  animation: winsliderimage 2s linear infinite running;
+}
+
+@keyframes winsliderimage {
+  0% {
+    top: 0px;
+    left: 0px;
+  }
+  100% {
+    top: 100%; /* Change 'bottom' to 'top' for smooth sliding towards the bottom */
+    left: -100%;
+  }
+}
+
+.rotate-div {
+  transform: rotate(-45deg); /* Adjust the angle as needed */
+  transform-origin: bottom left;
+}
+
+.shadow {
+  animation: identifier 1s linear forwards running;
+}
+@keyframes identifier {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 15%;
+  }
+}
+
+.bgimagedynamic {
+  transform: perspective(-900px) translateZ(-200px);
+  animation: bgimagedynamic_ 50s linear infinite running;
+}
+@keyframes bgimagedynamic_ {
+  0% {
+    transform: scaleZ(10) scaleX(1.5);
+  }
+  50% {
+    transform: scaleZ(5) scaleX(1);
+  }
+  100% {
+    transform: scaleZ(10) scaleX(1.5);
+  }
+}
+
+.rotate_background_image {
+  animation: rotateAnimation 20s linear infinite running;
+}
+
+@keyframes rotateAnimation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animateTextFromTopToButtom_class {
+  animation: animateTextFromTopToButtom 2s linear infinite running;
+}
+
+@keyframes animateTextFromTopToButtom {
+  from {
+    bottom: 0;
+  }
+  to {
+    top: 0;
+  }
+}
+
+.scrollable-text {
+  height: 10px; /* Set the desired height */
+  overflow: hidden;
+  animation: scroll 5s linear infinite; /* Adjust the animation duration as needed */
+}
+@keyframes scroll {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.waiting_for_next_round {
+  animation: waiting_for_next_round_text 1s infinite alternate;
+  text-shadow: 2px 2px 4px rgba(250, 247, 247, 0.5);
+}
+
+@keyframes waiting_for_next_round_text {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+.animation_div {
+  animation: animation_div_text 2.5s infinite forwards;
+}
+
+@keyframes animation_div_text {
+  from {
+    height: 0px;
+    opacity: 0;
+  }
+  to {
+    height: 90px;
+    opacity: 1;
+  }
+}
