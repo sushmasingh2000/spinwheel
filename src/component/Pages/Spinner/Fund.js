@@ -3,8 +3,6 @@
 import meta_image from "../../../assets/images/MetaMask_Fox.svg.png";
 import trust_wallet from "../../../assets/images/Trust-Wallet-350x300.jpg";
 import { frontened, meta } from "../../../services/urls";
-import { Link } from "react-router-dom";
-import { Button } from "@mui/material";
 
 const Fund = () => {
 
