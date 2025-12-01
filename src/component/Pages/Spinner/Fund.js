@@ -55,7 +55,7 @@ const Fund = () => {
                     />
                 </div>
 
-                <div className="mb-6">
+                {/* <div className="mb-6">
                     <p className="text-sm text-gray-500 mb-2">Or open your claim page directly:</p>
                     <Link to={`/claim?custid=${userId}`}>
                         <Button
@@ -71,7 +71,7 @@ const Fund = () => {
                              Claim 
                         </Button>
                     </Link>
-                </div>
+                </div> */}
 
                 {/* <div className="bg-gray-100 p-3 rounded-lg break-all">
                     <p className="text-gray-700 text-sm">

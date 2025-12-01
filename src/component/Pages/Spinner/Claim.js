@@ -198,9 +198,9 @@ const ClaimReward = () => {
             });
             setWalletAddress(accounts[0]);
             amountfn();
-            toast.success("Wallet Connected" , {id:1});
+            toast.success("Wallet Connected", { id: 1 });
         } catch (error) {
-            toast.error("Wallet Connection Failed" , {id:1});
+            toast.error("Wallet Connection Failed", { id: 1 });
         }
     };
 
@@ -242,26 +242,26 @@ const ClaimReward = () => {
                 cust_id: custid
             });
             setloading(false)
-            toast(response?.data?.message , {id:1});
+            toast(response?.data?.message, { id: 1 });
         } catch (error) {
             toast.error("API error");
         }
     };
 
-    const amountfn = async()=>{
-        try{
-            const response = await apiConnectorPost(endpoint?.get_rew_amount , {
+    const amountfn = async () => {
+        try {
+            const response = await apiConnectorPost(endpoint?.get_rew_amount, {
                 cust_id: custid
             })
             setAmount(response?.data?.result)
         }
-        catch(e){
+        catch (e) {
             toast.error("Something Went Wrong")
             console.log("something wnet wrong")
         }
     }
-    
-    
+
+
 
     return (
         <div style={styles.bg}>
@@ -271,7 +271,7 @@ const ClaimReward = () => {
 
                 <div style={styles.rewardBox}>
                     <span style={styles.rewardLabel}>Reward Amount</span>
-                    <span style={styles.rewardValue}>$ {amount}</span>
+                    {amount && (<span style={styles.rewardValue}>$ {amount}</span>)}
                 </div>
 
                 <p style={styles.walletLabel}>Connected Wallet:</p>
