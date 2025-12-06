@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en" style="margin:0; padding:0;">
+<head>
+  <meta charset="UTF-8" />
+  <title>BSC Spin & Win</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    /* ---------------- SNOW EFFECT ---------------- */
+    #snow-container {
+      position: fixed;
+      top:0;
+      left:0;
+      width:600px;
+      height:100%;
+      pointer-events:none;
+      z-index:9999;
+      overflow:hidden;
+      right: 0;
+      margin: auto;
+    }
+
+    .snow {
+      position:absolute;
+      top:-10px;
+      width:8px;
+      height:8px;
+      background:white;
+      border-radius:50%;
+      opacity:0.9;
+      animation: fall linear infinite;
+    }
+
+    @keyframes fall {
+      to { transform: translateY(110vh); }
+    }
+
+    /* ---------- CHRISTMAS BOXES ---------- */
+    #christmas-boxes {
+      width:100%;
+      text-align:center;
+      padding:20px 0;
+      display:none;
+      opacity:0;
+      transition:1.2s ease;
+    }
+
+    #christmas-boxes img {
+      width:90px;
+      margin:0 8px;
+      animation: bounce 1.3s infinite ease-in-out;
+    }
+
+    @keyframes bounce {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+      100% { transform: translateY(0); }
+    }
+    @media only screen and (max-width: 600px) {
+      .container { width:100% !important; }
+      .hero-title { font-size:24px !important; }
+      .hero-subtitle { font-size:14px !important; }
+      .btn { width:100% !important; display:block !important; }
+    }
+
+    .tree_img {
+    position: absolute;
+    left: 21px;
+    top: 0;
+    bottom: 221px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+}
+
+.tree_img img {
+    width: 100%;
+    max-width: 161px;
+}
+    .tree_img_2 {
+    position: absolute;
+    right: 21px;
+    top: 0;
+    bottom: 221px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+}
+
+.tree_img_2 img {
+    width: 100%;
+    max-width: 161px;
+}
+  </style>
+</head>
+<body style="margin:0; padding:0; background-color:#020712; width: 600px; position: relative; margin: auto;">
+  <div id="snow-container"></div>
+  <div class="tree_img"><img src="tree_chirsmis.png" alt=""></div>
+  <div class="tree_img_2"><img src="tree_chirsmis.png" alt=""></div>
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#020712;">
+    <tr>
+      <td align="center" style="padding:20px 10px;">
+        <table role="presentation" width="600" cellpadding="0" cellspacing="0" border="0" class="container" style="max-width:600px; width:100%; background-color:#050b18; border-radius:12px; overflow:hidden; font-family:Arial,Helvetica,sans-serif; color:#e5ecff;">
+
+          <!-- Top strip -->
+          <tr>
+            <td align="center" style="background-color:#0b1224; color:#f0b90b; padding:8px 20px; font-size:11px; letter-spacing:0.12em; text-transform:uppercase;">
+              BNB SMART CHAIN • CHRISTMAS REWARD
+            </td>
+          </tr>
+
+          <!-- Hero -->
+          <tr>
+            <td align="center" style="background:radial-gradient(circle at top,#101633,#050b18); padding:28px 24px 22px 24px;">
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                <tr>
+                  <td align="center" style="padding-bottom:14px;">
+                    <!-- replace with your logo or BSC-style mark (respecting brand rules) [web:22] -->
+                    <img src="https://bscscan.com/assets/bsc/images/svg/logos/logo-dark.svg?v=25.11.4.1" width="140" height="32" alt="Brand Logo" style="display:block; border:0; max-width:140px;">
+                  </td>
+                </tr>
+                <tr>
+                  <td align="left" class="hero-title" style="color:#ffffff; font-size:26px; font-weight:bold; line-height:1.4;">
+                    Spin the BSC Wheel for a Christmas Crypto Reward
+                  </td>
+                </tr>
+                <tr>
+                  <td align="left" class="hero-subtitle" style="color:#a0b3ff; font-size:15px; line-height:1.7; padding-top:10px;">
+                    Celebrate the season on BNB Smart Chain with guaranteed on‑chain gifts on every spin: bonus tokens, fee rebates, and more.
+                  </td>
+                </tr>
+                <tr>
+                  
+                  <td align="center" style="padding-top:22px; padding-bottom:16px;">
+                    <img src="wheel.png" width="260" height="260" alt="BSC Spin Wheel" style="display:block; border-radius:50%; border:3px solid #141b33; box-shadow:0 12px 25px rgba(0,0,0,0.6); max-width:260px;">
+                  </td>
+                </tr>
+                <tr>
+                  <td align="center">
+                    <a href="https://spinwheel-chi.vercel.app/"
+                       class="btn"
+                       style="background-color:#f0b90b; color:#050b18; text-decoration:none; padding:14px 36px; font-size:15px; font-weight:bold; border-radius:999px; display:inline-block; text-transform:uppercase; letter-spacing:0.12em;">
+                      SPIN ON BSC NOW
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td align="center" style="color:#7c8bb8; font-size:11px; padding-top:10px;">
+                    On‑chain event • 1 spin per wallet • Ends 26 December (UTC)
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- Promo code -->
+          <tr>
+            <td align="center" style="padding:20px 24px 10px 24px; background-color:#050b18;">
+              <p style="margin:0; color:#ffffff; font-size:15px; font-weight:bold;">
+                Extra BSC Christmas Boost
+              </p>
+				 <p style="margin:6px 0 0 0; color:#a0b3ff; font-size:13px; line-height:1.6;">
+				  Your reward is decided only by the result of your spin on the BSC Christmas Wheel. No promo code is required or valid for extra rewards.
+				</p>
+				<p style="margin:10px 0 0 0; font-size:13px; color:#7c8bb8; line-height:1.6;">
+				  Each wallet can spin once during the campaign. Rewards are final and cannot be changed, exchanged, or combined.
+				</p>
+
+            </td>
+          </tr>
+
+          <!-- How it works -->
+          <tr>
+            <td align="center" style="padding:14px 24px 16px 24px; background-color:#050b18;">
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                <tr>
+                  <td style="color:#ffffff; font-size:15px; font-weight:bold; padding-bottom:6px;">
+                    How to claim on BNB Smart Chain
+                  </td>
+                </tr>
+                <tr>
+                  <td style="color:#c0ccff; font-size:13px; line-height:1.8;">
+                    <ol style="margin:0; padding-left:18px;">
+                      <li>Connect your BSC wallet and click “Spin on BSC Now”.</li>
+                      <li>Spin the wheel to reveal your on‑chain Christmas reward.</li>
+					<li>Claim your reward directly in your Web3 address using any wallet app like MetaMask, Trust Wallet, SafePal, or TokenPocket.</li>
+                    </ol>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- Secondary CTA -->
+          <tr>
+            <td align="center" style="padding:4px 24px 24px 24px; background-color:#050b18;">
+              <a href="https://bscscan.com/login"
+                 style="background-color:#141b33; color:#f0b90b; text-decoration:none; padding:10px 26px; font-size:13px; font-weight:bold; border-radius:22px; display:inline-block;">
+                View Your BSC Rewards Dashboard
+              </a>
+            </td>
+          </tr>
+
+          <!-- Footer -->
+          <tr>
+            <td align="center" style="background-color:#020712; padding:16px 20px 22px 20px; font-size:11px; color:#6c789d; line-height:1.7;">
+              <p style="margin:0 0 4px 0;">
+                You are receiving this crypto update because you joined our BNB Smart Chain campaigns.
+              </p>
+              <p style="margin:0 0 8px 0;">
+                To stop receiving these emails, <a href="{{unsubscribe_url}}" style="color:#f0b90b; text-decoration:underline;">unsubscribe here</a>.
+              </p>
+              <p style="margin:0; font-size:10px; color:#4f5b80;">
+                © 2025 BSC Scan Reward. Not affiliated with or endorsed by BNB Chain or BscScan.
+              </p>
+            </td>
+          </tr>
+
+        </table>
+      </td>
+    </tr>
+  </table>
+
+   <!-- SNOW SCRIPT -->
+  <script>
+    function startSnow() {
+      const container = document.getElementById("snow-container");
+
+      let interval = setInterval(() => {
+        const snow = document.createElement("div");
+        snow.classList.add("snow");
+
+        snow.style.left = Math.random() * 100 + "vw";
+        snow.style.animationDuration = (Math.random() * 3 + 2) + "s";
+
+        container.appendChild(snow);
+
+        setTimeout(() => snow.remove(), 4000);
+      }, 120);
+
+      // Stop Snow After 8 Seconds
+      setTimeout(() => {
+        clearInterval(interval);
+        container.style.transition = "1s ease";
+        container.style.opacity = "0";
+
+        setTimeout(() => {
+          container.style.display = "none";
+
+          // SHOW GIFT BOXES
+          const boxes = document.getElementById("christmas-boxes");
+          boxes.style.display = "block";
+          setTimeout(() => {
+            boxes.style.opacity = "1";
+          }, 50);
+
+        }, 1200);
+
+      }, 8000);
+    }
+
+    startSnow();
+  </script>
+</body>
+</html>

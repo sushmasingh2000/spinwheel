@@ -230,3 +230,64 @@ body {
         padding: 18px 50px;
     }
 }
+.claim-btn {
+  background: linear-gradient(145deg, #ffdf74, #ffbb00);
+  color: #5b3200 !important;
+  padding: 10px 25px !important;
+  font-size: 20px !important;
+  font-weight: bold !important;
+  border-radius: 12px !important;
+  box-shadow:
+      0 6px 0 #d69700,
+      0 0 20px rgba(255, 200, 0, 0.8),
+      inset 0 0 10px rgba(255, 255, 255, 0.7);
+  text-transform: none !important;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.2s ease;
+}
+
+/* Shine animation */
+.claim-btn::after {
+  content: "";
+  position: absolute;
+  top: -150%;
+  left: -50%;
+  width: 200%;
+  height: 300%;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 30%,
+    rgba(255, 255, 255, 0.8) 50%,
+    rgba(255, 255, 255, 0) 70%
+  );
+  transform: rotate(20deg);
+  animation: shine 2s infinite ease-in-out;
+}
+
+@keyframes shine {
+  0% { transform: translateX(-200%) rotate(20deg); }
+  100% { transform: translateX(200%) rotate(20deg); }
+}
+
+/* Hover: button lifts + increases glow */
+.claim-btn:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow:
+      0 10px 0 #cc8e00,
+      0 0 30px rgba(255, 210, 0, 1),
+      inset 0 0 12px rgba(255, 255, 255, 0.9);
+}
+.marquee-blink {
+  animation: blink 2s infinite;
+  text-shadow: 0 0 5px #7af0ab, 0 0 10px rgb(115, 255, 0), 0 0 15px #ff0;
+}
+
+@keyframes blink {
+  0%, 50%, 100% {
+    opacity: 1;
+  }
+  25%, 75% {
+    opacity: 0.2;
+  }
+}

@@ -54,7 +54,16 @@ const Dashboard = () => {
       }}
       onClick={handleStart}
     >
-    <p className="">  Click to start the game!</p>
+    <p
+  className="px-4 py-2 bg-black/60 text-white text-lg rounded-xl shadow-lg font-semibold absolute"
+  style={{
+    top: "32%",
+    transform: "translateY(-50%)",
+  }}
+>
+   Click to Enter Reward Room! 🎁
+</p>
+
       <div className="snow">
         {Array.from({ length: 40 }).map((_, i) => (
           <span

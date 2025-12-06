@@ -209,17 +209,31 @@ const Duplicate = () => {
             backgroundRepeat: "no-repeat"
         }}>
             <div className="container">
-                {showClaimLink && (
+                {showClaimLink ?
                     <div className="text-center text-white">
-                        <p className="text-white bg-black rounded px-1">🎁 Click this link to claim your reward</p>
 
                         <Link to={`/fund`}>
-                            <Button className="!bg-white !mt-1">
+                            <Button className="claim-btn">
                                 Claim Now
                             </Button>
                         </Link>
+
+                        <p className="text-white bg-black rounded px-1 text-sm mt-5"> Click this button to claim your reward 🎁</p>
+
                     </div>
-                )}
+                    :
+                    <div className="flex justify-center items-center mt-4">
+                        <button
+                            onClick={spin}
+                            className="relative bg-gradient-to-b from-red-500 to-red-700 text-white font-bold py-3 px-8 rounded-lg shadow-2xl transform hover:-translate-y-1 hover:scale-105 transition-all duration-300 active:translate-y-0 active:shadow-md"
+                        >
+                            Spin Now
+                            <span className="absolute top-0 left-0 w-full h-full rounded-lg bg-white opacity-10 pointer-events-none"></span>
+                        </button>
+                    </div>
+                }
+
+
 
                 <div className="wheel-area">
                     <canvas id="wheelcanvas" ref={canvasRef} width={500} height={500}></canvas>
@@ -233,6 +247,7 @@ const Duplicate = () => {
                         />
 
                     </div>
+
                 </div>
 
                 {winner && (
@@ -245,7 +260,23 @@ const Duplicate = () => {
                 )}
 
                 <canvas ref={confettiRef} className="confetti"></canvas>
+
             </div>
+
+            {showClaimLink && (
+
+                <div className="fixed bottom-0 left-0 w-full z-50">
+                    <div className="bg-gradient-to-r from-red-500 via-yellow-400 to-red-500 shadow-lg">
+                        <div className="marquee-blink py-2 text-green-500 font-extrabold text-xl text-center cursor-pointer"
+                            onClick={spin}>
+                            Spin Now Again!
+                        </div>
+                    </div>
+                </div>
+            )}
+
+
+
         </div>
     );
 };
