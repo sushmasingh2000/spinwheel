@@ -4,6 +4,7 @@ import bg from "../../assets/images/bg.jpg";
 import { endpoint } from "../../services/urls";
 import Spinner from "./Spinner/Home";
 import Duplicate from "./Spinner/Duplicate";
+import bggreen from "../../assets/images/green.png"
 
 const Dashboard = () => {
   const [started, setStarted] = useState(false);
@@ -47,7 +48,7 @@ const Dashboard = () => {
     <div
       className="text-white p-2 text-center z-20 flex h-screen items-center justify-center cursor-pointer christmas-glow relative"
       style={{
-        backgroundImage: `url(${"https://i.pinimg.com/236x/4e/7d/b4/4e7db4d95320d533f5a80c879f3ec91e.jpg"})`,
+        backgroundImage: `url(${bggreen})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
@@ -57,7 +58,7 @@ const Dashboard = () => {
     <p
   className="px-4 py-2 bg-black/60 text-white text-lg rounded-xl shadow-lg font-semibold absolute"
   style={{
-    top: "32%",
+    top: "52%",
     transform: "translateY(-50%)",
   }}
 >

@@ -258,7 +258,6 @@ const Duplicate = () => {
                         </div>
                     </div>
                 )}
-
                 <canvas ref={confettiRef} className="confetti"></canvas>
 
             </div>
