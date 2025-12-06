@@ -48,6 +48,7 @@ const Dashboard = () => {
     <div
       className="text-white p-2 text-center z-20 flex h-screen items-center justify-center cursor-pointer christmas-glow relative"
       style={{
+        // backgroundImage: `url(${"https://i.pinimg.com/236x/4e/7d/b4/4e7db4d95320d533f5a80c879f3ec91e.jpg"})`,
         backgroundImage: `url(${bggreen})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
